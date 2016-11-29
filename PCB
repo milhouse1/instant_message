@@ -1,0 +1,24 @@
+public class PCB {
+
+	public String processName;
+	public int priority;
+	public int occupyCPUtime;
+	public int needCPUtime;
+	public enum processState{ready,wait,finish;}
+	
+	public int count;//计算运行轮转几次
+	
+	public PCB(String name,int priority,int CPUtime,int needTime,int count){
+		this.processName=name;
+		this.priority=priority;
+		this.occupyCPUtime=CPUtime;
+		this.needCPUtime=needTime;
+		this.count=count;
+	}
+	
+	public PCB(String name,int CPUtime,int needTime,int count){
+		this.processName=name;
+		this.occupyCPUtime=CPUtime;
+		this.needCPUtime=needTime;
+		this.count=count;
+	}
